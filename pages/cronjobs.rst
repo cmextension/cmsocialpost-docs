@@ -25,6 +25,17 @@ For example, to submit 50 posts::
 
     php path/to/your/joomla/cli/cmsocialpost_submit.php --limit=50
 
+In order to post images to Facebook, you need to edit your configuration.php file in your Joomla! root folder, change the line::
+
+    public $live_site = '';
+
+to::
+
+    public $live_site = 'http://www.yoursite.com/';
+
+Change "http://www.yoursite.com/" to your site's address. The reason of this is in command line environment, Joomla! can't get your site's 
+address, so we need store your site's address then retrieve it to create image's URL.
+
 Web based
 ---------
 
